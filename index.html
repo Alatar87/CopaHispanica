@@ -6,66 +6,133 @@
   <title>Copa Hispánica · Temporada 60</title>
   <meta name="description" content="Copa Hispánica (Temporada 60): 16 equipos, 2 grupos, 14 jornadas ida/vuelta, descanso y finales.">
   <style>
-    :root{ --bg:#0b1220; --card:#0f172a; --muted:#94a3b8; --text:#e5e7eb; --accent:#60a5fa; --accent2:#a78bfa; --ok:#34d399; --warn:#f59e0b; --bad:#fb7185;}
+    :root{
+      --card:rgba(255,255,255,.90);
+      --card2:rgba(255,255,255,.80);
+      --text:#0b1220;
+      --muted:#334155;
+      --accent:#2563eb;
+      --accent2:#7c3aed;
+      --ok:#16a34a;
+      --warn:#f59e0b;
+      --bad:#e11d48;
+      --line:rgba(15,23,42,.14);
+      --shadow:0 12px 32px rgba(2,6,23,.22);
+    }
     *{box-sizing:border-box}
-    html,body{margin:0;padding:0;background:linear-gradient(180deg,var(--bg),#0a0f1a 60%,#070b13);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Helvetica,Arial,sans-serif}
+    html,body{margin:0;padding:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Helvetica,Arial,sans-serif;color:var(--text)}
+    body{
+      background:
+        radial-gradient(1200px 700px at 10% 10%, rgba(14,165,233,.55), transparent 60%),
+        radial-gradient(900px 600px at 85% 15%, rgba(167,139,250,.55), transparent 60%),
+        radial-gradient(900px 700px at 40% 95%, rgba(34,197,94,.35), transparent 60%),
+        linear-gradient(180deg, rgba(255,255,255,.92), rgba(255,255,255,.86));
+      min-height:100vh;
+    }
     a{color:var(--accent)}
-    .container{max-width:1150px;margin:0 auto;padding:24px}
-    header{position:sticky;top:0;z-index:10;backdrop-filter:saturate(170%) blur(8px);background:rgba(10,15,26,.82);border-bottom:1px solid rgba(255,255,255,.06)}
-    .nav{display:flex;gap:16px;align-items:center;justify-content:space-between;padding:12px 24px}
+    .container{max-width:1150px;margin:0 auto;padding:22px}
+    header{
+      position:sticky;top:0;z-index:10;
+      backdrop-filter:saturate(170%) blur(10px);
+      background:rgba(255,255,255,.72);
+      border-bottom:1px solid var(--line);
+    }
+    .nav{display:flex;gap:16px;align-items:center;justify-content:space-between;padding:10px 22px}
     .brand{display:flex;gap:12px;align-items:center}
-    .logo{width:40px;height:40px;border-radius:10px;background:radial-gradient(circle at 30% 30%, var(--accent), var(--accent2));box-shadow:0 0 32px rgba(96,165,250,.4)}
-    .brand h1{font-size:1.08rem;margin:0;letter-spacing:.4px}
-    .menu{display:flex;gap:12px;flex-wrap:wrap}
-    .menu a{padding:8px 12px;border-radius:999px;background:rgba(255,255,255,.06);text-decoration:none;color:var(--text);border:1px solid rgba(255,255,255,.08)}
-    .menu a:hover{background:rgba(255,255,255,.1)}
-    .hero{padding:60px 24px 24px}
-    .hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:24px}
-    .card{background:var(--card);border:1px solid rgba(255,255,255,.06);border-radius:16px;box-shadow:0 8px 30px rgba(0,0,0,.32);padding:20px}
+    .logo{
+      width:42px;height:42px;border-radius:14px;
+      background:radial-gradient(circle at 30% 30%, #38bdf8, #a78bfa);
+      box-shadow:0 10px 24px rgba(37,99,235,.18);
+    }
+    .brand h1{font-size:1.05rem;margin:0;letter-spacing:.35px}
+    .menu{display:flex;gap:10px;flex-wrap:wrap;align-items:center;justify-content:flex-end}
+    .menu a{
+      padding:8px 12px;border-radius:999px;
+      background:rgba(255,255,255,.75);
+      text-decoration:none;color:var(--text);
+      border:1px solid var(--line);
+    }
+    .menu a:hover{transform:translateY(-1px); box-shadow:0 10px 18px rgba(2,6,23,.10)}
+    .sanctioned{
+      display:flex;align-items:center;gap:10px;
+      padding:6px 10px;border-radius:12px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.78);
+    }
+    .sanctioned img{height:34px;display:block;object-fit:contain}
+    .hero{padding:54px 22px 18px}
+    .hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:18px}
+    .card{
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:18px;
+      box-shadow:var(--shadow);
+      padding:18px;
+    }
+    .card.soft{background:var(--card2)}
     .title{font-size:clamp(28px,3vw,42px);margin:0 0 6px}
     .subtitle{margin:0;color:var(--muted)}
-    .pill{display:inline-block;margin-top:12px;padding:6px 10px;border-radius:999px;background:rgba(96,165,250,.15);border:1px solid rgba(96,165,250,.35);color:#cfe4ff;font-size:.9rem}
-    .grid{display:grid;gap:16px}
+    .pill{
+      display:inline-block;margin-top:10px;padding:6px 10px;border-radius:999px;
+      background:rgba(37,99,235,.10);
+      border:1px solid rgba(37,99,235,.25);
+      color:#0b1220;font-size:.92rem
+    }
+    .grid{display:grid;gap:14px}
     .grid.cols-2{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
     .grid.cols-3{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
-    h2{margin:0 0 10px;font-size:1.25rem}
+    h2{margin:0 0 10px;font-size:1.22rem}
     h3{margin:0 0 8px;font-size:1.05rem}
     .muted{color:var(--muted)}
     .kpi{display:flex;gap:14px;align-items:center}
-    .kpi .num{font-weight:800;font-size:1.4rem}
-    table{width:100%;border-collapse:collapse}
-    th,td{padding:10px;border-bottom:1px solid rgba(255,255,255,.07);text-align:left;vertical-align:top}
-    th{color:#cfe4ff;font-weight:650;background:rgba(255,255,255,.04)}
-    tr:hover td{background:rgba(255,255,255,.02)}
-    .badge{padding:3px 8px;border-radius:999px;font-size:.8rem;border:1px solid rgba(255,255,255,.2);display:inline-block}
-    .badge.ok{background:rgba(52,211,153,.1);border-color:rgba(52,211,153,.35)}
-    .badge.warn{background:rgba(245,158,11,.1);border-color:rgba(245,158,11,.35)}
-    .badge.bad{background:rgba(251,113,133,.1);border-color:rgba(251,113,133,.35)}
-    .section{padding:24px}
-    .two-col{display:grid;grid-template-columns:2fr 1fr;gap:24px}
-    .note{background:rgba(96,165,250,.08);border:1px dashed rgba(96,165,250,.35);padding:12px;border-radius:12px}
-    .small{font-size:.92rem}
-    .footer{padding:24px;color:var(--muted);text-align:center}
-    @media (max-width: 920px){ .hero .wrap{grid-template-columns:1fr} .two-col{grid-template-columns:1fr} }
-    img.logo-br{display:block; max-height:44px; object-fit:contain}
+    .kpi .num{font-weight:900;font-size:1.5rem}
+    table{width:100%;border-collapse:collapse;background:rgba(255,255,255,.55);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+    th,td{padding:10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+    th{color:#0b1220;font-weight:750;background:rgba(37,99,235,.08)}
+    tr:last-child td{border-bottom:none}
+    .section{padding:18px 0}
+    .two-col{display:grid;grid-template-columns:2fr 1fr;gap:18px}
+    .note{
+      background:rgba(34,197,94,.10);
+      border:1px dashed rgba(34,197,94,.35);
+      padding:12px;border-radius:14px
+    }
+    .badge{
+      padding:4px 10px;border-radius:999px;font-size:.86rem;
+      border:1px solid var(--line);display:inline-block;background:rgba(255,255,255,.7)
+    }
+    .badge.bad{border-color:rgba(225,29,72,.35);background:rgba(225,29,72,.08)}
     .groupTitle{display:flex;gap:8px;align-items:center}
     .dot{width:10px;height:10px;border-radius:999px;display:inline-block}
-    .dot.azul{background:#38bdf8}
-    .dot.rojo{background:#fb7185}
+    .dot.azul{background:#0ea5e9}
+    .dot.rojo{background:#e11d48}
+    .footer{padding:24px 0;color:var(--muted);text-align:center}
+    @media (max-width: 920px){ .hero .wrap{grid-template-columns:1fr} .two-col{grid-template-columns:1fr} }
   </style>
 </head>
 <body>
   <header>
     <nav class="nav container">
-      <div class="brand"><div class="logo" aria-hidden="true"></div><h1>Copa Hispánica · T60</h1></div>
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div>
+          <h1>Copa Hispánica · Temporada 60</h1>
+          <div class="muted" style="font-size:.88rem">
+            Enlace BR: <a href="https://www.blackoutrugby.com/home.php" target="_blank" rel="noopener">blackoutrugby.com/home.php</a>
+          </div>
+        </div>
+      </div>
+
       <div class="menu">
-        <a href="#info">Información</a>
+        <a href="#info">Info</a>
         <a href="#grupos">Grupos</a>
         <a href="#calendario">Calendario</a>
         <a href="#clasificacion">Clasificación</a>
         <a href="#reglamento">Reglamento</a>
-        <a href="#br-terms">BR · Términos</a>
         <a href="#contacto">Contacto</a>
+        <span class="sanctioned" title="Sanctioned Tournament">
+          <img src="sanctioned-logo.png" alt="Blackout Rugby · Sanctioned Tournament">
+        </span>
       </div>
     </nav>
   </header>
@@ -74,46 +141,28 @@
     <section class="hero">
       <div class="container wrap">
         <div class="card">
-          <p class="pill">Copa Hispánica · Temporada 60 · Lunes</p>
+          <p class="pill">Lunes · 16 equipos · 2 grupos · Ida/Vuelta</p>
           <h2 class="title">Copa Hispánica</h2>
-          <p class="subtitle">16 equipos · 2 grupos · 14 jornadas (ida/vuelta) · Jornada 15 descanso · Jornada 16 finales y puestos.</p>
-          <div class="grid cols-3" style="margin-top:16px">
-            <div class="kpi card"><div><div class="num" id="kpiEquipos">16</div><div class="muted">Equipos</div></div></div>
-            <div class="kpi card"><div><div class="num">14</div><div class="muted">Jornadas de grupos</div></div></div>
-            <div class="kpi card"><div><div class="num">🏆</div><div class="muted">Trofeos clásicos + Cuchara</div></div></div>
+          <p class="subtitle">Jornadas 1–14 (grupos) · Jornada 15 descanso · Jornada 16 finales y cruces por puestos.</p>
+
+          <div class="grid cols-3" style="margin-top:14px">
+            <div class="kpi card soft"><div><div class="num">16</div><div class="muted">Equipos</div></div></div>
+            <div class="kpi card soft"><div><div class="num">14</div><div class="muted">Jornadas de grupos</div></div></div>
+            <div class="kpi card soft"><div><div class="num">🏆</div><div class="muted">Trofeos clásicos + Cuchara</div></div></div>
           </div>
+
           <div class="note" style="margin-top:12px">
-            <strong>Inscripciones cerradas.</strong> Grupos creados según ranking nacional. Partidos los <strong>lunes</strong> (amistoso).
-          </div>
-          <div style="margin-top:12px" class="small">
-            Enlace requerido a BR: <a href="https://www.blackoutrugby.com/home.php" target="_blank" rel="noopener">https://www.blackoutrugby.com/home.php</a>
+            <strong>Inscripciones cerradas.</strong> Los grupos se han creado según ranking nacional.
+            <div class="muted" style="margin-top:6px">Inicio: <strong>lunes 19 de enero de 2026</strong> (y cada lunes una ronda).</div>
           </div>
         </div>
 
         <div class="card">
           <h2>Próximo partido</h2>
           <div id="proximo" class="muted">Aún no definido</div>
-          <hr style="border-color:rgba(255,255,255,.06);margin:16px 0">
+          <hr style="border:none;border-top:1px solid var(--line);margin:16px 0">
           <h2>Últimos resultados</h2>
           <ul id="ultimos" class="muted" style="padding-left:18px;margin:0"></ul>
-
-          <div class="note small" style="margin-top:16px">
-            <label><input type="checkbox" id="adminToggle"> Modo admin (local)</label>
-            <div id="adminPanel" style="display:none; margin-top:8px">
-              <div style="display:flex;gap:10px;flex-wrap:wrap">
-                <button id="btnExport">Descargar results.json</button>
-                <button id="btnLoadRepo">Cargar results.json del repo</button>
-              </div>
-              <p class="small muted" style="margin:8px 0 4px">Pega JSON válido para importar/editar:</p>
-              <textarea id="jsonArea" rows="9" style="width:100%" placeholder='[{"jornada":1,"fase":"Grupos (Ida)","grupo":"AZUL","fecha":"YYYY-MM-DD 19:35","local":"...","visitante":"...","pL":0,"pV":0,"tL":0,"tV":0,"estado":"finalizado"}]'></textarea>
-              <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:8px">
-                <button id="btnImport">Importar JSON</button>
-                <button id="btnGuardarLocal">Guardar en este navegador</button>
-                <button id="btnReset">Reset (plantilla)</button>
-              </div>
-              <p class="small muted">Sube el fichero descargado como <code>results.json</code> en la raíz del repo.</p>
-            </div>
-          </div>
         </div>
       </div>
     </section>
@@ -121,16 +170,16 @@
     <section id="info" class="section">
       <div class="container two-col">
         <div class="card">
-          <h2>Resumen del hilo del foro</h2>
-          <p>Recuperamos la Copa Hispánica. Se juega los <strong>lunes</strong> y se reparten trofeos a los primeros clasificados y al último (Cuchara de Madera). Para la <strong>Temporada 60</strong> participan <strong>16 equipos</strong> y se han creado <strong>2 grupos</strong> según ranking nacional.</p>
-          <p>Formato: <strong>14 jornadas</strong> (ida y vuelta dentro de cada grupo). <strong>Jornada 15</strong> descanso. <strong>Jornada 16</strong> finales y cruces por puestos para cerrar la clasificación final.</p>
+          <h2>Resumen</h2>
+          <p>La Copa Hispánica se juega los <strong>lunes</strong> y reparte trofeos a los primeros clasificados y al último (Cuchara de Madera).</p>
+          <p>En la <strong>Temporada 60</strong> participan <strong>16 equipos</strong> y se han creado <strong>2 grupos</strong> (Azul y Rojo). Se disputan <strong>14 jornadas</strong> (ida y vuelta dentro de cada grupo), <strong>Jornada 15</strong> de descanso y <strong>Jornada 16</strong> con finales y cruces por puestos para cerrar la clasificación final.</p>
         </div>
         <div class="card">
-          <h2>Logos y cumplimiento</h2>
-          <div class="note">
-            <p class="small" style="margin:0 0 8px">BR exige usar el logo <strong>“Sanctioned Tournament”</strong> en todas las páginas y enlazar a la home de BR.</p>
-            <img class="logo-br" src="sanctioned-logo.png" alt="Blackout Rugby · Sanctioned Tournament (añadir asset oficial)">
-            <div class="small" style="margin-top:8px">Cuando tengas el logo oficial, súbelo como <code>sanctioned-logo.png</code> (sin editar).</div>
+          <h2>Sanctioned Tournament</h2>
+          <p class="muted">Torneo sancionado por Blackout Rugby.</p>
+          <div class="sanctioned" style="justify-content:space-between">
+            <span class="muted" style="font-size:.9rem">Logo oficial</span>
+            <img src="sanctioned-logo.png" alt="Blackout Rugby · Sanctioned Tournament">
           </div>
         </div>
       </div>
@@ -155,9 +204,8 @@
       <div class="container">
         <div class="card">
           <h2>Calendario</h2>
-          <p class="muted small">Los partidos se cargan desde <code>results.json</code>. Si no hay fecha, aparecerá “—”.</p>
           <table id="tablaCal">
-            <thead><tr><th>Jrn</th><th>Fecha</th><th>Fase</th><th>Grupo</th><th>Partido</th><th>Marcador</th><th>Tries</th><th>Estado</th></tr></thead>
+            <thead><tr><th>Jrn</th><th>Fecha</th><th>Fase</th><th>Grupo</th><th>Partido</th><th>Marcador</th><th>Tries</th></tr></thead>
             <tbody></tbody>
           </table>
         </div>
@@ -166,19 +214,19 @@
 
     <section id="clasificacion" class="section">
       <div class="container">
-        <div class="grid cols-2">
-          <div class="card">
-            <div class="groupTitle"><span class="dot azul"></span><h2 style="margin:0">Clasificación · Grupo AZUL</h2></div>
-            <div id="tablaAzul" style="margin-top:10px"></div>
-          </div>
-          <div class="card">
-            <div class="groupTitle"><span class="dot rojo"></span><h2 style="margin:0">Clasificación · Grupo ROJO</h2></div>
-            <div id="tablaRojo" style="margin-top:10px"></div>
-          </div>
+        <div class="card">
+          <div class="groupTitle"><span class="dot azul"></span><h2 style="margin:0">Clasificación · Grupo AZUL</h2></div>
+          <div id="tablaAzul" style="margin-top:12px"></div>
         </div>
-        <div class="card" style="margin-top:16px">
+
+        <div class="card" style="margin-top:14px">
+          <div class="groupTitle"><span class="dot rojo"></span><h2 style="margin:0">Clasificación · Grupo ROJO</h2></div>
+          <div id="tablaRojo" style="margin-top:12px"></div>
+        </div>
+
+        <div class="card" style="margin-top:14px">
           <h2>Cuchara de Madera</h2>
-          <p class="muted small">El último clasificado global (sumando grupos) recibe la Cuchara de Madera.</p>
+          <p class="muted">Se mostrará cuando haya resultados registrados.</p>
           <div id="cuchara" class="badge bad">por decidir</div>
         </div>
       </div>
@@ -197,7 +245,7 @@
               <ul>
                 <li><strong>Final:</strong> 1º Azul vs 1º Rojo (2 trofeos: campeón y subcampeón).</li>
                 <li><strong>3º puesto:</strong> 2º Azul vs 2º Rojo (1 trofeo).</li>
-                <li>Resto de equipos: cruces 3º–8º por grupo para definir clasificación final.</li>
+                <li>Resto de equipos: cruces 3º–8º por grupo para definir la clasificación final.</li>
               </ul>
             </li>
           </ul>
@@ -205,8 +253,8 @@
           <h3>Sistema de puntuación</h3>
           <ul>
             <li>Victoria: <strong>4</strong> puntos · Empate: <strong>2</strong> · Derrota: <strong>0</strong></li>
-            <li>Bonus ofensivo: <strong>+1</strong> por anotar 4 o más tries.</li>
-            <li>Bonus defensivo: <strong>+1</strong> por perder por 7 o menos.</li>
+            <li>Bonus ofensivo: <strong>+1</strong> por anotar <strong>4 o más tries</strong>.</li>
+            <li>Bonus defensivo: <strong>+1</strong> por perder por <strong>7 o menos</strong>.</li>
           </ul>
 
           <h3>Clasificación fase de grupos</h3>
@@ -222,25 +270,6 @@
             <li>Tries marcados en el partido</li>
             <li>Tries totales en la competición</li>
           </ol>
-
-          <p class="muted small">Nota: esta web calcula automáticamente puntos, bonus y clasificación a partir de <code>results.json</code>.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="br-terms" class="section">
-      <div class="container">
-        <div class="card">
-          <h2>Blackout Rugby · 3rd Party Competition Terms (resumen)</h2>
-          <ol class="small">
-            <li>La competición debe tener una web con estructura del torneo y fixtures al día, y ser transparente para monitorización.</li>
-            <li>Debe usar el logo “Sanctioned Tournament” provisto por BR en todas las páginas y enlazar a la home de BR.</li>
-            <li>Los recursos de BR no se pueden editar sin permiso escrito.</li>
-            <li>Actuar de forma justa y ética; la organización puede gestionar incidencias y rechazar participantes si es justo/ético.</li>
-            <li>Representar positivamente a BR; BR puede solicitar cambios o retirar acceso si lo considera necesario.</li>
-            <li>Reportar usos no autorizados de recursos protegidos de BR.</li>
-            <li>Garantía de no infringir derechos de terceros e indemnización a Blackout por reclamaciones derivadas.</li>
-          </ol>
         </div>
       </div>
     </section>
@@ -249,7 +278,7 @@
       <div class="container">
         <div class="card">
           <h2>Contacto</h2>
-          <p>Organización: <a href="mailto:organizacion@example.com">organizacion@example.com</a> · Foro nacional de Blackout Rugby.</p>
+          <p>Para dudas y avisos, usa el <strong>foro oficial</strong> de Blackout Rugby.</p>
         </div>
       </div>
     </section>
@@ -284,15 +313,9 @@ const STATE = { partidos: [] };
 const fmt = (s)=> s? new Date(s.replace(' ','T')+':00').toLocaleString('es-ES',{dateStyle:'medium', timeStyle:'short'}) : '—';
 
 async function cargarResultados(){
-  try{
-    const res = await fetch('results.json', {cache:'no-store'});
-    if(!res.ok) throw new Error('no results.json');
-    const data = await res.json();
-    if(Array.isArray(data)) STATE.partidos = data; else throw new Error('formato inválido');
-  }catch(e){
-    const local = localStorage.getItem('hispanica_results_s60');
-    STATE.partidos = local ? JSON.parse(local) : [];
-  }
+  const res = await fetch('results.json', {cache:'no-store'});
+  const data = await res.json();
+  STATE.partidos = Array.isArray(data) ? data : [];
 }
 
 function renderGrupos(){
@@ -300,12 +323,12 @@ function renderGrupos(){
   const rojo = document.getElementById('grupoRojo');
   azul.innerHTML = ''; rojo.innerHTML='';
   GROUPS.AZUL.forEach((t,i)=>{
-    const d=document.createElement('div'); d.className='note small';
+    const d=document.createElement('div'); d.className='note';
     d.innerHTML = `<strong>${i+1}.</strong> ${t.name} <span class="muted">— ${t.id}</span>`;
     azul.appendChild(d);
   });
   GROUPS.ROJO.forEach((t,i)=>{
-    const d=document.createElement('div'); d.className='note small';
+    const d=document.createElement('div'); d.className='note';
     d.innerHTML = `<strong>${i+1}.</strong> ${t.name} <span class="muted">— ${t.id}</span>`;
     rojo.appendChild(d);
   });
@@ -313,23 +336,22 @@ function renderGrupos(){
 
 function renderCalendario(){
   const tb = document.querySelector('#tablaCal tbody'); tb.innerHTML='';
-  const rows = [...STATE.partidos].sort((a,b)=> (a.jornada??0)-(b.jornada??0) || (a.fase||'').localeCompare(b.fase||''));
+  const rows = [...STATE.partidos].filter(x=>x.fase!=="Descanso")
+    .sort((a,b)=> (a.jornada??0)-(b.jornada??0) || (a.fase||'').localeCompare(b.fase||''));
   rows.forEach(r=>{
     const tr=document.createElement('tr');
     const marcador = (r.pL!=null && r.pV!=null) ? `${r.pL} – ${r.pV}` : '—';
     const tries = (r.tL!=null && r.tV!=null) ? `${r.tL} – ${r.tV}` : '—';
     const partido = (r.local && r.visitante) ? `${r.local} vs ${r.visitante}` : '—';
-    tr.innerHTML = `<td>${r.jornada??'—'}</td><td>${fmt(r.fecha)}</td><td>${r.fase||'—'}</td><td>${r.grupo||'—'}</td><td>${partido}</td><td>${marcador}</td><td>${tries}</td><td>${r.estado||'pendiente'}</td>`;
+    tr.innerHTML = `<td>${r.jornada??'—'}</td><td>${fmt(r.fecha)}</td><td>${r.fase||'—'}</td><td>${r.grupo||'—'}</td><td>${partido}</td><td>${marcador}</td><td>${tries}</td>`;
     tb.appendChild(tr);
   });
 }
 
 function matchPoints(pFor, pAgainst, triesFor){
-  // Base points
   let pts = 0;
   if(pFor > pAgainst) pts += 4;
   else if(pFor === pAgainst) pts += 2;
-  // Bonuses
   if(typeof triesFor === 'number' && triesFor >= 4) pts += 1;
   if(pFor < pAgainst && (pAgainst - pFor) <= 7) pts += 1;
   return pts;
@@ -337,7 +359,7 @@ function matchPoints(pFor, pAgainst, triesFor){
 
 function initTable(teamNames){
   const t = {};
-  teamNames.forEach(n=> t[n] = {Equipo:n,PJ:0,PG:0,PE:0,PP:0,PF:0,PC:0,Diff:0,TB:0,Pts:0,PB_ens:0,PB_der:0,Tries:0});
+  teamNames.forEach(n=> t[n] = {Equipo:n,PJ:0,PG:0,PE:0,PP:0,PF:0,PC:0,Diff:0,Pts:0,PB_ens:0,PB_der:0});
   return t;
 }
 
@@ -351,14 +373,11 @@ function computeGroup(groupKey){
     if(!L || !V) return;
     L.PJ++; V.PJ++;
     L.PF += p.pL; L.PC += p.pV; V.PF += p.pV; V.PC += p.pL;
-    L.Tries += (typeof p.tL==='number' ? p.tL : 0);
-    V.Tries += (typeof p.tV==='number' ? p.tV : 0);
 
     if(p.pL>p.pV){ L.PG++; V.PP++; }
     else if(p.pL<p.pV){ V.PG++; L.PP++; }
     else { L.PE++; V.PE++; }
 
-    // bonus counters
     if(typeof p.tL==='number' && p.tL>=4) L.PB_ens++;
     if(typeof p.tV==='number' && p.tV>=4) V.PB_ens++;
     if(p.pL<p.pV && (p.pV-p.pL)<=7) L.PB_der++;
@@ -369,7 +388,6 @@ function computeGroup(groupKey){
   });
   Object.values(tab).forEach(r=> r.Diff = r.PF - r.PC);
 
-  // Head-to-head helper (only used when exactly two teams are tied on Pts, Diff, PF)
   function headToHead(a,b){
     const h2h = played.filter(p=> (p.local===a && p.visitante===b) || (p.local===b && p.visitante===a));
     if(h2h.length===0) return 0;
@@ -386,17 +404,16 @@ function computeGroup(groupKey){
       }
     });
     if(ptsA !== ptsB) return ptsA - ptsB;
-    return diffA; // fallback
+    return diffA;
   }
 
   const arr = Object.values(tab).sort((x,y)=>{
     if(y.Pts!==x.Pts) return y.Pts-x.Pts;
     if(y.Diff!==x.Diff) return y.Diff-x.Diff;
     if(y.PF!==x.PF) return y.PF-x.PF;
-    // direct result (only if they are the two tied)
-    return headToHead(x.Equipo,y.Equipo) * -1; // because sort expects y before x
+    return headToHead(x.Equipo,y.Equipo) * -1;
   });
-  return arr;
+  return {rows:arr, playedCount: played.length};
 }
 
 function renderTable(targetId, rows){
@@ -418,21 +435,19 @@ function renderTable(targetId, rows){
   el.appendChild(tbl);
 }
 
-function renderCuchara(azul, rojo){
-  const all = [...azul, ...rojo];
-  if(all.length===0){ document.getElementById('cuchara').textContent='por decidir'; return; }
-  // last by points then diff then PF
-  const sorted = [...all].sort((a,b)=> a.Pts-b.Pts || a.Diff-b.Diff || a.PF-b.PF);
-  const last = sorted[0];
-  document.getElementById('cuchara').textContent = last.Equipo;
+function renderCuchara(allRows, anyPlayed){
+  const el = document.getElementById('cuchara');
+  if(!anyPlayed){ el.textContent = 'por decidir'; return; }
+  const sorted = [...allRows].sort((a,b)=> a.Pts-b.Pts || a.Diff-b.Diff || a.PF-b.PF);
+  el.textContent = sorted[0]?.Equipo || 'por decidir';
 }
 
 function renderProximoYUltimos(){
-  const futuros = STATE.partidos.filter(p=> p.estado!=='finalizado' && p.local && p.visitante);
+  const futuros = STATE.partidos.filter(p=> p.estado!=='finalizado' && p.local && p.visitante && p.fase!=="Descanso");
   const conFecha = futuros.filter(p=> p.fecha).map(p=> ({...p,cuando:new Date(p.fecha.replace(' ','T'))})).sort((a,b)=> a.cuando-b.cuando);
   const prox = conFecha[0] || futuros.sort((a,b)=> (a.jornada??0)-(b.jornada??0))[0];
   const div = document.getElementById('proximo');
-  if(prox){ div.innerHTML = `<strong>${prox.local}</strong> vs <strong>${prox.visitante}</strong><br><span class="muted">${prox.fase} · ${prox.grupo||''} · ${prox.fecha?fmt(prox.fecha):'Fecha por confirmar'}</span>`; }
+  if(prox){ div.innerHTML = `<strong>${prox.local}</strong> vs <strong>${prox.visitante}</strong><br><span class="muted">${prox.fase} · ${prox.grupo||''} · ${prox.fecha?fmt(prox.fecha):'—'}</span>`; }
   else div.textContent='No hay partidos pendientes';
 
   const jugados = STATE.partidos.filter(p=> p.estado==='finalizado' && p.pL!=null && p.pV!=null)
@@ -446,54 +461,19 @@ function renderProximoYUltimos(){
   });
 }
 
-function bindAdmin(){
-  const toggle=document.getElementById('adminToggle');
-  const panel=document.getElementById('adminPanel');
-  toggle.addEventListener('change',()=> panel.style.display = toggle.checked ? 'block':'none');
-
-  document.getElementById('btnExport').addEventListener('click',()=>{
-    const blob=new Blob([JSON.stringify(STATE.partidos,null,2)],{type:'application/json'});
-    const a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download='results.json'; a.click(); URL.revokeObjectURL(a.href);
-  });
-  document.getElementById('btnLoadRepo').addEventListener('click',async()=>{
-    await cargarResultados();
-    document.getElementById('jsonArea').value = JSON.stringify(STATE.partidos,null,2);
-    renderAll();
-  });
-  document.getElementById('btnImport').addEventListener('click',()=>{
-    try{
-      const data=JSON.parse(document.getElementById('jsonArea').value);
-      if(Array.isArray(data)){ STATE.partidos=data; renderAll(); alert('Datos importados'); }
-      else alert('El JSON debe ser un array');
-    }catch(e){ alert('JSON inválido'); }
-  });
-  document.getElementById('btnGuardarLocal').addEventListener('click',()=>{
-    localStorage.setItem('hispanica_results_s60', JSON.stringify(STATE.partidos));
-    alert('Guardado en este navegador. Sube el results.json al repo para hacerlo público.');
-  });
-  document.getElementById('btnReset').addEventListener('click',()=>{
-    // reset to template shipped in repo
-    location.reload();
-  });
-}
-
-function renderAll(){
+async function init(){
+  document.getElementById('year').textContent = new Date().getFullYear();
+  await cargarResultados();
   renderGrupos();
   renderCalendario();
   const azul = computeGroup('AZUL');
   const rojo = computeGroup('ROJO');
-  renderTable('tablaAzul', azul);
-  renderTable('tablaRojo', rojo);
-  renderCuchara(azul, rojo);
+  renderTable('tablaAzul', azul.rows);
+  renderTable('tablaRojo', rojo.rows);
+  renderCuchara([...azul.rows, ...rojo.rows], (azul.playedCount + rojo.playedCount) > 0);
   renderProximoYUltimos();
 }
-
-(async function(){
-  document.getElementById('year').textContent = new Date().getFullYear();
-  await cargarResultados();
-  bindAdmin();
-  renderAll();
-})();
+init();
 </script>
 </body>
 </html>
