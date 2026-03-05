@@ -318,11 +318,11 @@
     "fecha": "2026-02-09 19:35",
     "local": "Baskonia",
     "visitante": "C.R. Guindalera",
-    "pL": null,
-    "pV": null,
-    "tL": null,
-    "tV": null,
-    "estado": "pendiente"
+    "pL": 86,
+    "pV": 0,
+    "tL": 11,
+    "tV": 0,
+    "estado": "finalizado"
   },
   {
     "jornada": 4,
@@ -331,11 +331,11 @@
     "fecha": "2026-02-09 19:35",
     "local": "U.E Suburense",
     "visitante": "Subterranean Homesick Aliens",
-    "pL": null,
-    "pV": null,
-    "tL": null,
-    "tV": null,
-    "estado": "pendiente"
+    "pL": 16,
+    "pV": 36,
+    "tL": 1,
+    "tV": 5,
+    "estado": "finalizado"
   },
   {
     "jornada": 4,
@@ -344,11 +344,11 @@
     "fecha": "2026-02-09 19:35",
     "local": "Gipuzkoa Errugbi",
     "visitante": "Guardo Sharks",
-    "pL": null,
-    "pV": null,
-    "tL": null,
-    "tV": null,
-    "estado": "pendiente"
+    "pL": 31,
+    "pV": 52,
+    "tL": 5,
+    "tV": 7,
+    "estado": "finalizado"
   },
   {
     "jornada": 4,
@@ -357,11 +357,11 @@
     "fecha": "2026-02-09 19:35",
     "local": "Lokomotíva Košice",
     "visitante": "Chamizos",
-    "pL": null,
-    "pV": null,
-    "tL": null,
-    "tV": null,
-    "estado": "pendiente"
+    "pL": 0,
+    "pV": 91,
+    "tL": 0,
+    "tV": 14,
+    "estado": "finalizado"
   },
   {
     "jornada": 4,
@@ -370,11 +370,11 @@
     "fecha": "2026-02-09 19:35",
     "local": "Amics de la Cervesa",
     "visitante": "RIB",
-    "pL": null,
-    "pV": null,
-    "tL": null,
-    "tV": null,
-    "estado": "pendiente"
+    "pL": 45,
+    "pV": 17,
+    "tL": 6,
+    "tV": 2,
+    "estado": "finalizado"
   },
   {
     "jornada": 4,
@@ -383,11 +383,11 @@
     "fecha": "2026-02-09 19:35",
     "local": "Sparta de Sibaris",
     "visitante": "Chamizos RC",
-    "pL": null,
-    "pV": null,
-    "tL": null,
-    "tV": null,
-    "estado": "pendiente"
+    "pL": 48,
+    "pV": 22,
+    "tL": 6,
+    "tV": 3,
+    "estado": "finalizado"
   },
   {
     "jornada": 4,
@@ -396,11 +396,11 @@
     "fecha": "2026-02-09 19:35",
     "local": "Diogenes Club",
     "visitante": "Molledo S.D.",
-    "pL": null,
-    "pV": null,
-    "tL": null,
-    "tV": null,
-    "estado": "pendiente"
+    "pL": 21,
+    "pV": 41,
+    "tL": 3,
+    "tV": 6,
+    "estado": "finalizado"
   },
   {
     "jornada": 4,
@@ -409,11 +409,11 @@
     "fecha": "2026-02-09 19:35",
     "local": "Amics de la Pilsner Urquell",
     "visitante": "C.P. Les Abelles",
-    "pL": null,
-    "pV": null,
-    "tL": null,
-    "tV": null,
-    "estado": "pendiente"
+    "pL": 29,
+    "pV": 44,
+    "tL": 4,
+    "tV": 6,
+    "estado": "finalizado"
   },
   {
     "jornada": 5,
@@ -422,11 +422,11 @@
     "fecha": "2026-02-16 19:35",
     "local": "Baskonia",
     "visitante": "Subterranean Homesick Aliens",
-    "pL": null,
-    "pV": null,
-    "tL": null,
-    "tV": null,
-    "estado": "pendiente"
+    "pL": 40,
+    "pV": 24,
+    "tL": 6,
+    "tV": 3,
+    "estado": "finalizado"
   },
   {
     "jornada": 5,
@@ -435,11 +435,11 @@
     "fecha": "2026-02-16 19:35",
     "local": "C.R. Guindalera",
     "visitante": "Guardo Sharks",
-    "pL": null,
-    "pV": null,
-    "tL": null,
-    "tV": null,
-    "estado": "pendiente"
+    "pL": 78,
+    "pV": 12,
+    "tL": 11,
+    "tV": 2,
+    "estado": "finalizado"
   },
   {
     "jornada": 5,
@@ -448,11 +448,11 @@
     "fecha": "2026-02-16 19:35",
     "local": "U.E Suburense",
     "visitante": "Chamizos",
-    "pL": null,
-    "pV": null,
-    "tL": null,
-    "tV": null,
-    "estado": "pendiente"
+    "pL": 14,
+    "pV": 41,
+    "tL": 2,
+    "tV": 5,
+    "estado": "finalizado"
   },
   {
     "jornada": 5,
@@ -461,11 +461,11 @@
     "fecha": "2026-02-16 19:35",
     "local": "Gipuzkoa Errugbi",
     "visitante": "Lokomotíva Košice",
-    "pL": null,
-    "pV": null,
-    "tL": null,
-    "tV": null,
-    "estado": "pendiente"
+    "pL": 79,
+    "pV": 0,
+    "tL": 11,
+    "tV": 0,
+    "estado": "finalizado"
   },
   {
     "jornada": 5,
@@ -474,11 +474,11 @@
     "fecha": "2026-02-16 19:35",
     "local": "Amics de la Cervesa",
     "visitante": "Chamizos RC",
-    "pL": null,
-    "pV": null,
-    "tL": null,
-    "tV": null,
-    "estado": "pendiente"
+    "pL": 93,
+    "pV": 0,
+    "tL": 13,
+    "tV": 0,
+    "estado": "finalizado"
   },
   {
     "jornada": 5,
@@ -487,11 +487,11 @@
     "fecha": "2026-02-16 19:35",
     "local": "RIB",
     "visitante": "Molledo S.D.",
-    "pL": null,
-    "pV": null,
-    "tL": null,
-    "tV": null,
-    "estado": "pendiente"
+    "pL": 46,
+    "pV": 22,
+    "tL": 6,
+    "tV": 1,
+    "estado": "finalizado"
   },
   {
     "jornada": 5,
@@ -500,11 +500,11 @@
     "fecha": "2026-02-16 19:35",
     "local": "Sparta de Sibaris",
     "visitante": "C.P. Les Abelles",
-    "pL": null,
-    "pV": null,
-    "tL": null,
-    "tV": null,
-    "estado": "pendiente"
+    "pL": 27,
+    "pV": 26,
+    "tL": 3,
+    "tV": 4,
+    "estado": "finalizado"
   },
   {
     "jornada": 5,
@@ -513,11 +513,11 @@
     "fecha": "2026-02-16 19:35",
     "local": "Diogenes Club",
     "visitante": "Amics de la Pilsner Urquell",
-    "pL": null,
-    "pV": null,
-    "tL": null,
-    "tV": null,
-    "estado": "pendiente"
+    "pL": 40,
+    "pV": 17,
+    "tL": 4,
+    "tV": 2,
+    "estado": "finalizado"
   },
   {
     "jornada": 6,
@@ -526,11 +526,11 @@
     "fecha": "2026-02-23 19:35",
     "local": "Baskonia",
     "visitante": "Guardo Sharks",
-    "pL": null,
-    "pV": null,
-    "tL": null,
-    "tV": null,
-    "estado": "pendiente"
+    "pL": 41,
+    "pV": 7,
+    "tL": 6,
+    "tV": 1,
+    "estado": "finalizado"
   },
   {
     "jornada": 6,
@@ -539,11 +539,11 @@
     "fecha": "2026-02-23 19:35",
     "local": "Subterranean Homesick Aliens",
     "visitante": "Chamizos",
-    "pL": null,
-    "pV": null,
-    "tL": null,
-    "tV": null,
-    "estado": "pendiente"
+    "pL": 39,
+    "pV": 31,
+    "tL": 5,
+    "tV": 4,
+    "estado": "finalizado"
   },
   {
     "jornada": 6,
@@ -552,11 +552,11 @@
     "fecha": "2026-02-23 19:35",
     "local": "C.R. Guindalera",
     "visitante": "Lokomotíva Košice",
-    "pL": null,
-    "pV": null,
-    "tL": null,
-    "tV": null,
-    "estado": "pendiente"
+    "pL": 148,
+    "pV": 0,
+    "tL": 22,
+    "tV": 0,
+    "estado": "finalizado"
   },
   {
     "jornada": 6,
@@ -565,11 +565,11 @@
     "fecha": "2026-02-23 19:35",
     "local": "U.E Suburense",
     "visitante": "Gipuzkoa Errugbi",
-    "pL": null,
-    "pV": null,
-    "tL": null,
-    "tV": null,
-    "estado": "pendiente"
+    "pL": 36,
+    "pV": 12,
+    "tL": 5,
+    "tV": 2,
+    "estado": "finalizado"
   },
   {
     "jornada": 6,
@@ -578,11 +578,11 @@
     "fecha": "2026-02-23 19:35",
     "local": "Amics de la Cervesa",
     "visitante": "C.P. Les Abelles",
-    "pL": null,
-    "pV": null,
-    "tL": null,
-    "tV": null,
-    "estado": "pendiente"
+    "pL": 40,
+    "pV": 37,
+    "tL": 4,
+    "tV": 4,
+    "estado": "finalizado"
   },
   {
     "jornada": 6,
@@ -591,11 +591,11 @@
     "fecha": "2026-02-23 19:35",
     "local": "Chamizos RC",
     "visitante": "Diogenes Club",
-    "pL": null,
-    "pV": null,
-    "tL": null,
-    "tV": null,
-    "estado": "pendiente"
+    "pL": 7,
+    "pV": 51,
+    "tL": 1,
+    "tV": 7,
+    "estado": "finalizado"
   },
   {
     "jornada": 6,
@@ -604,11 +604,11 @@
     "fecha": "2026-02-23 19:35",
     "local": "RIB",
     "visitante": "Sparta de Sibaris",
-    "pL": null,
-    "pV": null,
-    "tL": null,
-    "tV": null,
-    "estado": "pendiente"
+    "pL": 61,
+    "pV": 0,
+    "tL": 9,
+    "tV": 0,
+    "estado": "finalizado"
   },
   {
     "jornada": 6,
@@ -617,11 +617,11 @@
     "fecha": "2026-02-23 19:35",
     "local": "Molledo S.D.",
     "visitante": "Amics de la Pilsner Urquell",
-    "pL": null,
-    "pV": null,
-    "tL": null,
-    "tV": null,
-    "estado": "pendiente"
+    "pL": 55,
+    "pV": 0,
+    "tL": 7,
+    "tV": 0,
+    "estado": "finalizado"
   },
   {
     "jornada": 7,
@@ -630,11 +630,11 @@
     "fecha": "2026-03-02 19:35",
     "local": "Baskonia",
     "visitante": "Chamizos",
-    "pL": null,
-    "pV": null,
-    "tL": null,
-    "tV": null,
-    "estado": "pendiente"
+    "pL": 22,
+    "pV": 27,
+    "tL": 3,
+    "tV": 3,
+    "estado": "finalizado"
   },
   {
     "jornada": 7,
@@ -643,11 +643,11 @@
     "fecha": "2026-03-02 19:35",
     "local": "Guardo Sharks",
     "visitante": "Lokomotíva Košice",
-    "pL": null,
-    "pV": null,
-    "tL": null,
-    "tV": null,
-    "estado": "pendiente"
+    "pL": 128,
+    "pV": 0,
+    "tL": 19,
+    "tV": 0,
+    "estado": "finalizado"
   },
   {
     "jornada": 7,
@@ -656,11 +656,11 @@
     "fecha": "2026-03-02 19:35",
     "local": "Subterranean Homesick Aliens",
     "visitante": "Gipuzkoa Errugbi",
-    "pL": null,
-    "pV": null,
-    "tL": null,
-    "tV": null,
-    "estado": "pendiente"
+    "pL": 88,
+    "pV": 3,
+    "tL": 12,
+    "tV": 0,
+    "estado": "finalizado"
   },
   {
     "jornada": 7,
@@ -669,11 +669,11 @@
     "fecha": "2026-03-02 19:35",
     "local": "C.R. Guindalera",
     "visitante": "U.E Suburense",
-    "pL": null,
-    "pV": null,
-    "tL": null,
-    "tV": null,
-    "estado": "pendiente"
+    "pL": 78,
+    "pV": 3,
+    "tL": 10,
+    "tV": 0,
+    "estado": "finalizado"
   },
   {
     "jornada": 7,
@@ -682,11 +682,11 @@
     "fecha": "2026-03-02 19:35",
     "local": "Amics de la Cervesa",
     "visitante": "Molledo S.D.",
-    "pL": null,
-    "pV": null,
-    "tL": null,
-    "tV": null,
-    "estado": "pendiente"
+    "pL": 37,
+    "pV": 26,
+    "tL": 4,
+    "tV": 2,
+    "estado": "finalizado"
   },
   {
     "jornada": 7,
@@ -695,11 +695,11 @@
     "fecha": "2026-03-02 19:35",
     "local": "C.P. Les Abelles",
     "visitante": "Chamizos RC",
-    "pL": null,
-    "pV": null,
-    "tL": null,
-    "tV": null,
-    "estado": "pendiente"
+    "pL": 50,
+    "pV": 0,
+    "tL": 7,
+    "tV": 0,
+    "estado": "finalizado"
   },
   {
     "jornada": 7,
@@ -708,11 +708,11 @@
     "fecha": "2026-03-02 19:35",
     "local": "RIB",
     "visitante": "Amics de la Pilsner Urquell",
-    "pL": null,
-    "pV": null,
-    "tL": null,
-    "tV": null,
-    "estado": "pendiente"
+    "pL": 47,
+    "pV": 44,
+    "tL": 6,
+    "tV": 5,
+    "estado": "finalizado"
   },
   {
     "jornada": 7,
@@ -721,11 +721,11 @@
     "fecha": "2026-03-02 19:35",
     "local": "Sparta de Sibaris",
     "visitante": "Diogenes Club",
-    "pL": null,
-    "pV": null,
-    "tL": null,
-    "tV": null,
-    "estado": "pendiente"
+    "pL": 19,
+    "pV": 41,
+    "tL": 1,
+    "tV": 5,
+    "estado": "finalizado"
   },
   {
     "jornada": 8,
