@@ -734,11 +734,11 @@
     "fecha": "2026-03-09 19:35",
     "local": "Lokomotíva Košice",
     "visitante": "Baskonia",
-    "pL": null,
-    "pV": null,
-    "tL": null,
-    "tV": null,
-    "estado": "pendiente"
+    "pL": 0,
+    "pV": 104,
+    "tL": 0,
+    "tV": 16,
+    "estado": "finalizado"
   },
   {
     "jornada": 8,
@@ -747,11 +747,11 @@
     "fecha": "2026-03-09 19:35",
     "local": "Gipuzkoa Errugbi",
     "visitante": "Chamizos",
-    "pL": null,
-    "pV": null,
-    "tL": null,
-    "tV": null,
-    "estado": "pendiente"
+    "pL": 14,
+    "pV": 66,
+    "tL": 2,
+    "tV": 10,
+    "estado": "finalizado"
   },
   {
     "jornada": 8,
@@ -760,11 +760,11 @@
     "fecha": "2026-03-09 19:35",
     "local": "U.E Suburense",
     "visitante": "Guardo Sharks",
-    "pL": null,
-    "pV": null,
-    "tL": null,
-    "tV": null,
-    "estado": "pendiente"
+    "pL": 33,
+    "pV": 31,
+    "tL": 5,
+    "tV": 3,
+    "estado": "finalizado"
   },
   {
     "jornada": 8,
@@ -773,11 +773,11 @@
     "fecha": "2026-03-09 19:35",
     "local": "C.R. Guindalera",
     "visitante": "Subterranean Homesick Aliens",
-    "pL": null,
-    "pV": null,
-    "tL": null,
-    "tV": null,
-    "estado": "pendiente"
+    "pL": 24,
+    "pV": 16,
+    "tL": 3,
+    "tV": 1,
+    "estado": "finalizado"
   },
   {
     "jornada": 8,
@@ -786,11 +786,11 @@
     "fecha": "2026-03-09 19:35",
     "local": "Amics de la Pilsner Urquell",
     "visitante": "Amics de la Cervesa",
-    "pL": null,
-    "pV": null,
-    "tL": null,
-    "tV": null,
-    "estado": "pendiente"
+    "pL": 10,
+    "pV": 45,
+    "tL": 1,
+    "tV": 5,
+    "estado": "finalizado"
   },
   {
     "jornada": 8,
@@ -799,11 +799,11 @@
     "fecha": "2026-03-09 19:35",
     "local": "Diogenes Club",
     "visitante": "C.P. Les Abelles",
-    "pL": null,
-    "pV": null,
-    "tL": null,
-    "tV": null,
-    "estado": "pendiente"
+    "pL": 27,
+    "pV": 13,
+    "tL": 3,
+    "tV": 1,
+    "estado": "finalizado"
   },
   {
     "jornada": 8,
@@ -812,11 +812,11 @@
     "fecha": "2026-03-09 19:35",
     "local": "Sparta de Sibaris",
     "visitante": "Molledo S.D.",
-    "pL": null,
-    "pV": null,
-    "tL": null,
-    "tV": null,
-    "estado": "pendiente"
+    "pL": 3,
+    "pV": 42,
+    "tL": 0,
+    "tV": 6,
+    "estado": "finalizado"
   },
   {
     "jornada": 8,
@@ -825,11 +825,11 @@
     "fecha": "2026-03-09 19:35",
     "local": "RIB",
     "visitante": "Chamizos RC",
-    "pL": null,
-    "pV": null,
-    "tL": null,
-    "tV": null,
-    "estado": "pendiente"
+    "pL": 41,
+    "pV": 12,
+    "tL": 5,
+    "tV": 2,
+    "estado": "finalizado"
   },
   {
     "jornada": 9,
