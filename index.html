@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Copa Hispánica · Temporada 60</title>
-  <meta name="description" content="Copa Hispánica (Temporada 60): 16 equipos, 2 grupos, 14 jornadas ida/vuelta, descanso y finales.">
+  <title>Copa Hispánica</title>
+  <meta name="description" content="Copa Hispánica: temporadas, clasificación, calendario y resultados.">
   <style>
     :root{
-      --card:rgba(255,255,255,.90);
+      --card:rgba(255,255,255,.91);
       --card2:rgba(255,255,255,.80);
       --text:#0b1220;
       --muted:#334155;
@@ -23,18 +23,18 @@
     html,body{margin:0;padding:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Helvetica,Arial,sans-serif;color:var(--text)}
     body{
       background:
-        radial-gradient(1200px 700px at 10% 10%, rgba(14,165,233,.55), transparent 60%),
-        radial-gradient(900px 600px at 85% 15%, rgba(167,139,250,.55), transparent 60%),
-        radial-gradient(900px 700px at 40% 95%, rgba(34,197,94,.35), transparent 60%),
-        linear-gradient(180deg, rgba(255,255,255,.92), rgba(255,255,255,.86));
+        radial-gradient(1100px 650px at 9% 9%, rgba(14,165,233,.54), transparent 60%),
+        radial-gradient(850px 570px at 86% 14%, rgba(167,139,250,.56), transparent 60%),
+        radial-gradient(900px 700px at 42% 96%, rgba(34,197,94,.32), transparent 60%),
+        linear-gradient(180deg, rgba(255,255,255,.94), rgba(255,255,255,.87));
       min-height:100vh;
     }
     a{color:var(--accent)}
-    .container{max-width:1150px;margin:0 auto;padding:22px}
+    .container{max-width:1180px;margin:0 auto;padding:22px}
     header{
       position:sticky;top:0;z-index:10;
       backdrop-filter:saturate(170%) blur(10px);
-      background:rgba(255,255,255,.72);
+      background:rgba(255,255,255,.78);
       border-bottom:1px solid var(--line);
     }
     .nav{display:flex;gap:16px;align-items:center;justify-content:space-between;padding:10px 22px}
@@ -43,41 +43,27 @@
       width:42px;height:42px;border-radius:14px;
       background:radial-gradient(circle at 30% 30%, #38bdf8, #a78bfa);
       box-shadow:0 10px 24px rgba(37,99,235,.18);
+      flex:0 0 auto;
     }
-    .brand h1{font-size:1.05rem;margin:0;letter-spacing:.35px}
+    .brand h1{font-size:1.08rem;margin:0;letter-spacing:.35px}
     .menu{display:flex;gap:10px;flex-wrap:wrap;align-items:center;justify-content:flex-end}
-    .menu a{
+    .menu a,.seasonSelect{
       padding:8px 12px;border-radius:999px;
-      background:rgba(255,255,255,.75);
+      background:rgba(255,255,255,.76);
       text-decoration:none;color:var(--text);
       border:1px solid var(--line);
+      font:inherit;
     }
     .menu a:hover{transform:translateY(-1px); box-shadow:0 10px 18px rgba(2,6,23,.10)}
-    .sanctioned{
-      display:flex;align-items:center;gap:10px;
-      padding:6px 10px;border-radius:12px;
-      border:1px solid var(--line);
-      background:rgba(255,255,255,.78);
-    }
-    .sanctioned img{height:34px;display:block;object-fit:contain}
-    .hero{padding:54px 22px 18px}
+    .sanctioned{display:flex;align-items:center;padding:6px 10px;border-radius:14px;border:1px solid var(--line);background:rgba(255,255,255,.78)}
+    .sanctioned img{height:68px;display:block;object-fit:contain}
+    .hero{padding:48px 22px 16px}
     .hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:18px}
-    .card{
-      background:var(--card);
-      border:1px solid var(--line);
-      border-radius:18px;
-      box-shadow:var(--shadow);
-      padding:18px;
-    }
+    .card{background:var(--card);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);padding:18px}
     .card.soft{background:var(--card2)}
-    .title{font-size:clamp(28px,3vw,42px);margin:0 0 6px}
-    .subtitle{margin:0;color:var(--muted)}
-    .pill{
-      display:inline-block;margin-top:10px;padding:6px 10px;border-radius:999px;
-      background:rgba(37,99,235,.10);
-      border:1px solid rgba(37,99,235,.25);
-      color:#0b1220;font-size:.92rem
-    }
+    .title{font-size:clamp(30px,3vw,44px);margin:0 0 6px}
+    .subtitle{margin:0;color:var(--muted);line-height:1.45}
+    .pill{display:inline-block;margin-top:10px;padding:6px 10px;border-radius:999px;background:rgba(37,99,235,.10);border:1px solid rgba(37,99,235,.25);color:#0b1220;font-size:.92rem}
     .grid{display:grid;gap:14px}
     .grid.cols-2{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
     .grid.cols-3{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
@@ -86,28 +72,30 @@
     .muted{color:var(--muted)}
     .kpi{display:flex;gap:14px;align-items:center}
     .kpi .num{font-weight:900;font-size:1.5rem}
-    table{width:100%;border-collapse:collapse;background:rgba(255,255,255,.55);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+    table{width:100%;border-collapse:collapse;background:rgba(255,255,255,.57);border:1px solid var(--line);border-radius:14px;overflow:hidden}
     th,td{padding:10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
     th{color:#0b1220;font-weight:750;background:rgba(37,99,235,.08)}
     tr:last-child td{border-bottom:none}
-    .section{padding:18px 0}
+    .section{padding:16px 0}
     .two-col{display:grid;grid-template-columns:2fr 1fr;gap:18px}
-    .note{
-      background:rgba(34,197,94,.10);
-      border:1px dashed rgba(34,197,94,.35);
-      padding:12px;border-radius:14px
-    }
-    .badge{
-      padding:4px 10px;border-radius:999px;font-size:.86rem;
-      border:1px solid var(--line);display:inline-block;background:rgba(255,255,255,.7)
-    }
+    .note{background:rgba(34,197,94,.10);border:1px dashed rgba(34,197,94,.35);padding:12px;border-radius:14px}
+    .badge{padding:4px 10px;border-radius:999px;font-size:.86rem;border:1px solid var(--line);display:inline-block;background:rgba(255,255,255,.7)}
     .badge.bad{border-color:rgba(225,29,72,.35);background:rgba(225,29,72,.08)}
+    .badge.ok{border-color:rgba(22,163,74,.35);background:rgba(22,163,74,.08)}
     .groupTitle{display:flex;gap:8px;align-items:center}
     .dot{width:10px;height:10px;border-radius:999px;display:inline-block}
     .dot.azul{background:#0ea5e9}
     .dot.rojo{background:#e11d48}
+    .podio{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}
+    .podio .place{padding:14px;border-radius:16px;background:rgba(255,255,255,.72);border:1px solid var(--line)}
     .footer{padding:24px 0;color:var(--muted);text-align:center}
-    @media (max-width: 920px){ .hero .wrap{grid-template-columns:1fr} .two-col{grid-template-columns:1fr} }
+    .small{font-size:.92rem}
+    @media (max-width: 920px){
+      .hero .wrap{grid-template-columns:1fr}
+      .two-col{grid-template-columns:1fr}
+      .nav{align-items:flex-start;flex-direction:column}
+      .sanctioned img{height:58px}
+    }
   </style>
 </head>
 <body>
@@ -116,7 +104,7 @@
       <div class="brand">
         <div class="logo" aria-hidden="true"></div>
         <div>
-          <h1>Copa Hispánica · Temporada 60</h1>
+          <h1>Copa Hispánica</h1>
           <div class="muted" style="font-size:.88rem">
             Enlace BR: <a href="https://www.blackoutrugby.com/home.php" target="_blank" rel="noopener">blackoutrugby.com/home.php</a>
           </div>
@@ -124,12 +112,12 @@
       </div>
 
       <div class="menu">
-        <a href="#info">Info</a>
-        <a href="#grupos">Grupos</a>
-        <a href="#calendario">Calendario</a>
+        <select id="seasonSelect" class="seasonSelect" aria-label="Seleccionar temporada"></select>
         <a href="#clasificacion">Clasificación</a>
+        <a href="#calendario">Calendario</a>
+        <a href="#podio">Podio</a>
+        <a href="#info">Info</a>
         <a href="#reglamento">Reglamento</a>
-        <a href="#contacto">Contacto</a>
         <span class="sanctioned" title="Sanctioned Tournament">
           <img src="sanctioned-logo.png" alt="Blackout Rugby · Sanctioned Tournament">
         </span>
@@ -141,19 +129,19 @@
     <section class="hero">
       <div class="container wrap">
         <div class="card">
-          <p class="pill">Lunes · 16 equipos · 2 grupos · Ida/Vuelta</p>
-          <h2 class="title">Copa Hispánica</h2>
-          <p class="subtitle">Jornadas 1–14 (grupos) · Jornada 15 descanso · Jornada 16 finales y cruces por puestos.</p>
+          <p class="pill" id="seasonPill">Temporada actual</p>
+          <h2 class="title">Copa Hispánica <span id="seasonTitle"></span></h2>
+          <p class="subtitle" id="seasonSummary"></p>
 
           <div class="grid cols-3" style="margin-top:14px">
-            <div class="kpi card soft"><div><div class="num">16</div><div class="muted">Equipos</div></div></div>
-            <div class="kpi card soft"><div><div class="num">14</div><div class="muted">Jornadas de grupos</div></div></div>
-            <div class="kpi card soft"><div><div class="num">🏆</div><div class="muted">Trofeos clásicos + Cuchara</div></div></div>
+            <div class="kpi card soft"><div><div class="num" id="kpiTeams">—</div><div class="muted">Equipos</div></div></div>
+            <div class="kpi card soft"><div><div class="num" id="kpiRounds">—</div><div class="muted">Jornadas base</div></div></div>
+            <div class="kpi card soft"><div><div class="num" id="kpiFinals">—</div><div class="muted">Finales</div></div></div>
           </div>
 
           <div class="note" style="margin-top:12px">
-            <strong>Inscripciones cerradas.</strong> Los grupos se han creado según ranking nacional.
-            <div class="muted" style="margin-top:6px">Inicio: <strong>lunes 19 de enero de 2026</strong> (y cada lunes una ronda).</div>
+            <strong>Formato activo:</strong>
+            <div class="muted" style="margin-top:6px" id="seasonInfoShort"></div>
           </div>
         </div>
 
@@ -163,51 +151,6 @@
           <hr style="border:none;border-top:1px solid var(--line);margin:16px 0">
           <h2>Últimos resultados</h2>
           <ul id="ultimos" class="muted" style="padding-left:18px;margin:0"></ul>
-        </div>
-      </div>
-    </section>
-
-    <section id="info" class="section">
-      <div class="container two-col">
-        <div class="card">
-          <h2>Resumen</h2>
-          <p>La Copa Hispánica se juega los <strong>lunes</strong> y reparte trofeos a los primeros clasificados y al último (Cuchara de Madera).</p>
-          <p>En la <strong>Temporada 60</strong> participan <strong>16 equipos</strong> y se han creado <strong>2 grupos</strong> (Azul y Rojo). Se disputan <strong>14 jornadas</strong> (ida y vuelta dentro de cada grupo), <strong>Jornada 15</strong> de descanso y <strong>Jornada 16</strong> con finales y cruces por puestos para cerrar la clasificación final.</p>
-        </div>
-        <div class="card">
-          <h2>Sanctioned Tournament</h2>
-          <p class="muted">Torneo sancionado por Blackout Rugby.</p>
-          <div class="sanctioned" style="justify-content:space-between">
-            <span class="muted" style="font-size:.9rem">Logo oficial</span>
-            <img src="sanctioned-logo.png" alt="Blackout Rugby · Sanctioned Tournament">
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="grupos" class="section">
-      <div class="container">
-        <div class="grid cols-2">
-          <div class="card">
-            <div class="groupTitle"><span class="dot azul"></span><h2 style="margin:0">Grupo AZUL</h2></div>
-            <div id="grupoAzul" class="grid" style="margin-top:10px"></div>
-          </div>
-          <div class="card">
-            <div class="groupTitle"><span class="dot rojo"></span><h2 style="margin:0">Grupo ROJO</h2></div>
-            <div id="grupoRojo" class="grid" style="margin-top:10px"></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="calendario" class="section">
-      <div class="container">
-        <div class="card">
-          <h2>Calendario</h2>
-          <table id="tablaCal">
-            <thead><tr><th>Jrn</th><th>Fecha</th><th>Fase</th><th>Grupo</th><th>Partido</th><th>Marcador</th><th>Tries</th></tr></thead>
-            <tbody></tbody>
-          </table>
         </div>
       </div>
     </section>
@@ -223,11 +166,49 @@
           <div class="groupTitle"><span class="dot rojo"></span><h2 style="margin:0">Clasificación · Grupo ROJO</h2></div>
           <div id="tablaRojo" style="margin-top:12px"></div>
         </div>
+      </div>
+    </section>
 
-        <div class="card" style="margin-top:14px">
+    <section id="podio" class="section">
+      <div class="container">
+        <div class="card">
+          <h2>Podio</h2>
+          <div class="podio">
+            <div class="place"><strong>🥇 Campeón</strong><br><span id="podio1" class="muted">por decidir</span></div>
+            <div class="place"><strong>🥈 Subcampeón</strong><br><span id="podio2" class="muted">por decidir</span></div>
+            <div class="place"><strong>🥉 Tercer puesto</strong><br><span id="podio3" class="muted">por decidir</span></div>
+          </div>
+        </div>
+
+        <div class="card" id="cucharaCard" style="margin-top:14px;display:none">
           <h2>Cuchara de Madera</h2>
-          <p class="muted">Se mostrará cuando haya resultados registrados.</p>
           <div id="cuchara" class="badge bad">por decidir</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="calendario" class="section">
+      <div class="container">
+        <div class="card">
+          <h2>Calendario y resultados</h2>
+          <table id="tablaCal">
+            <thead><tr><th>Jrn</th><th>Fecha</th><th>Fase</th><th>Grupo</th><th>Partido</th><th>Marcador</th><th>Tries</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section id="info" class="section">
+      <div class="container two-col">
+        <div class="card">
+          <h2>Información de la temporada</h2>
+          <p id="seasonInfo"></p>
+        </div>
+        <div class="card">
+          <h2>Temporadas</h2>
+          <p class="muted">La página soporta varias temporadas. Usa el selector superior para consultar el archivo histórico sin mover de sitio los resultados actuales.</p>
+          <p class="small"><strong>Actual:</strong> Temporada 61 · <strong>Archivo:</strong> Temporada 60</p>
         </div>
       </div>
     </section>
@@ -235,20 +216,9 @@
     <section id="reglamento" class="section">
       <div class="container">
         <div class="card">
-          <h2>Reglamento · Temporada 60</h2>
+          <h2>Reglamento</h2>
           <h3>Formato</h3>
-          <ul>
-            <li><strong>16 equipos</strong> repartidos en 2 grupos (Azul y Rojo) según ranking nacional.</li>
-            <li><strong>Jornadas 1–7:</strong> ida (grupos). <strong>Jornadas 8–14:</strong> vuelta, invirtiendo local/visitante.</li>
-            <li><strong>Jornada 15:</strong> descanso.</li>
-            <li><strong>Jornada 16:</strong> finales y cruces por puestos:
-              <ul>
-                <li><strong>Final:</strong> 1º Azul vs 1º Rojo (2 trofeos: campeón y subcampeón).</li>
-                <li><strong>3º puesto:</strong> 2º Azul vs 2º Rojo (1 trofeo).</li>
-                <li>Resto de equipos: cruces 3º–8º por grupo para definir la clasificación final.</li>
-              </ul>
-            </li>
-          </ul>
+          <ul id="formatRules"></ul>
 
           <h3>Sistema de puntuación</h3>
           <ul>
@@ -257,7 +227,7 @@
             <li>Bonus defensivo: <strong>+1</strong> por perder por <strong>7 o menos</strong>.</li>
           </ul>
 
-          <h3>Clasificación fase de grupos</h3>
+          <h3>Clasificación</h3>
           <ol>
             <li>Puntos</li>
             <li>Diferencia de puntos (PF − PC)</li>
@@ -284,65 +254,301 @@
     </section>
   </main>
 
-  <footer class="footer">© <span id="year"></span> Copa Hispánica · T60 · <a href="https://www.blackoutrugby.com/home.php" target="_blank" rel="noopener">Blackout Rugby</a></footer>
+  <footer class="footer">© <span id="year"></span> Copa Hispánica · <a href="https://www.blackoutrugby.com/home.php" target="_blank" rel="noopener">Blackout Rugby</a></footer>
 
 <script>
-const GROUPS = {
-  AZUL: [
-    {name:"Baskonia", id:"82595"},
-    {name:"Chamizos", id:"1558"},
-    {name:"Guardo Sharks", id:"40246"},
-    {name:"Subterranean Homesick Aliens", id:"79139"},
-    {name:"C.R. Guindalera", id:"83261"},
-    {name:"U.E Suburense", id:"82879"},
-    {name:"Gipuzkoa Errugbi", id:"82824"},
-    {name:"Lokomotíva Košice", id:"6752"},
-  ],
-  ROJO: [
-    {name:"Amics de la Cervesa", id:"83075"},
-    {name:"C.P. Les Abelles", id:"82816"},
-    {name:"Molledo S.D.", id:"6378"},
-    {name:"Chamizos RC", id:"10800"},
-    {name:"RIB", id:"82729"},
-    {name:"Sparta de Sibaris", id:"82920"},
-    {name:"Diogenes Club", id:"350"},
-    {name:"Amics de la Pilsner Urquell", id:"74442"},
-  ]
+const SEASONS = {
+  "61": {
+    "label": "Temporada 61",
+    "status": "actual",
+    "resultsPath": "results.json",
+    "teams": {
+      "AZUL": [
+        [
+          "Amics de la Cervesa",
+          "83075"
+        ],
+        [
+          "Subterranean Homesick Aliens",
+          "79139"
+        ],
+        [
+          "C.P. Les Abelles",
+          "828165"
+        ],
+        [
+          "Chamizos RC",
+          "10800"
+        ],
+        [
+          "RIB",
+          "82729"
+        ],
+        [
+          "Molledo S.D.",
+          "6378"
+        ],
+        [
+          "Diogenes Club",
+          "350"
+        ],
+        [
+          "Blue Lions",
+          "82600"
+        ],
+        [
+          "Myop Ramers",
+          "7993"
+        ],
+        [
+          "Lokomotíva Košice",
+          "6752"
+        ]
+      ],
+      "ROJO": [
+        [
+          "Baskonia",
+          "82595"
+        ],
+        [
+          "Chamizos",
+          "1558"
+        ],
+        [
+          "Guardo Sharks",
+          "40246"
+        ],
+        [
+          "C.R. Guindalera",
+          "83261"
+        ],
+        [
+          "Setanta",
+          "82750"
+        ],
+        [
+          "Sparta de Sibaris",
+          "82920"
+        ],
+        [
+          "U.E Suburense",
+          "82879"
+        ],
+        [
+          "Haches",
+          "82654"
+        ],
+        [
+          "Remzikal",
+          "82613"
+        ],
+        [
+          "Amics de la Pilsner Urquell",
+          "74442"
+        ]
+      ]
+    },
+    "summary": "20 equipos · 2 grupos de 10 · J1–J9 grupos · J10–J14 intergrupos · J15 descanso · J16 finales.",
+    "info": "La Temporada 61 se juega con 20 equipos en dos grupos creados según Ranking Nacional. Las jornadas 1–9 se disputan dentro de cada grupo. Las jornadas 10–14 enfrentan a equipos de distinto grupo según el ranking del momento de creación del calendario. La jornada 15 es descanso y la jornada 16 cierra la Copa con final, tercer puesto y cruces por posición.",
+    "kpis": [
+      "20",
+      "14",
+      "J16"
+    ],
+    "seasonNum": 61
+  },
+  "60": {
+    "label": "Temporada 60",
+    "status": "archivo",
+    "resultsPath": "archive/t60-results.json",
+    "teams": {
+      "AZUL": [
+        [
+          "Baskonia",
+          "82595"
+        ],
+        [
+          "Chamizos",
+          "1558"
+        ],
+        [
+          "Guardo Sharks",
+          "40246"
+        ],
+        [
+          "Subterranean Homesick Aliens",
+          "79139"
+        ],
+        [
+          "C.R. Guindalera",
+          "83261"
+        ],
+        [
+          "U.E Suburense",
+          "82879"
+        ],
+        [
+          "Gipuzkoa Errugbi",
+          "82824"
+        ],
+        [
+          "Lokomotíva Košice",
+          "6752"
+        ]
+      ],
+      "ROJO": [
+        [
+          "Amics de la Cervesa",
+          "83075"
+        ],
+        [
+          "C.P. Les Abelles",
+          "82816"
+        ],
+        [
+          "Molledo S.D.",
+          "6378"
+        ],
+        [
+          "Chamizos RC",
+          "10800"
+        ],
+        [
+          "RIB",
+          "82729"
+        ],
+        [
+          "Sparta de Sibaris",
+          "82920"
+        ],
+        [
+          "Diogenes Club",
+          "350"
+        ],
+        [
+          "Amics de la Pilsner Urquell",
+          "74442"
+        ]
+      ]
+    },
+    "summary": "16 equipos · 2 grupos de 8 · 14 jornadas ida/vuelta · J15 descanso · J16 finales.",
+    "info": "La Temporada 60 se disputó con 16 equipos en dos grupos. Tras 14 jornadas de fase de grupos, la jornada 16 definió la clasificación final mediante final, tercer puesto y cruces de posición.",
+    "kpis": [
+      "16",
+      "14",
+      "J16"
+    ],
+    "seasonNum": 60
+  }
 };
-const STATE = { partidos: [] };
-const fmt = (s)=> s? new Date(s.replace(' ','T')+':00').toLocaleString('es-ES',{dateStyle:'medium', timeStyle:'short'}) : '—';
 
-async function cargarResultados(){
-  const res = await fetch('results.json', {cache:'no-store'});
-  const data = await res.json();
-  STATE.partidos = Array.isArray(data) ? data : [];
+const STATE = { partidos: [], seasonKey: "61" };
+const fmt = (s)=> s? new Date(s.replace(' ','T')+':00').toLocaleString('es-ES',{dateStyle:'medium', timeStyle:'short'}) : 'por confirmar';
+
+function seasonFromUrl(){
+  const params = new URLSearchParams(location.search);
+  const s = params.get('season');
+  return SEASONS[s] ? s : "61";
 }
 
-function renderGrupos(){
-  const azul = document.getElementById('grupoAzul');
-  const rojo = document.getElementById('grupoRojo');
-  azul.innerHTML = ''; rojo.innerHTML='';
-  GROUPS.AZUL.forEach((t,i)=>{
-    const d=document.createElement('div'); d.className='note';
-    d.innerHTML = `<strong>${i+1}.</strong> ${t.name} <span class="muted">— ${t.id}</span>`;
-    azul.appendChild(d);
+function setUrlSeason(season){
+  const url = new URL(location.href);
+  if(season === "61") url.searchParams.delete('season');
+  else url.searchParams.set('season', season);
+  history.replaceState(null, '', url.toString());
+}
+
+async function cargarResultados(seasonKey){
+  const season = SEASONS[seasonKey];
+  const res = await fetch(season.resultsPath, {cache:'no-store'});
+  const data = await res.json();
+  STATE.partidos = Array.isArray(data) ? data : [];
+  STATE.seasonKey = seasonKey;
+}
+
+function seasonTeams(groupKey){
+  return SEASONS[STATE.seasonKey].teams[groupKey].map(x => Array.isArray(x) ? {name:x[0], id:x[1]} : x);
+}
+
+function teamNames(groupKey){
+  return seasonTeams(groupKey).map(x=>x.name);
+}
+
+function allTeamNames(){
+  return [...teamNames("AZUL"), ...teamNames("ROJO")];
+}
+
+function teamGroup(team){
+  if(teamNames("AZUL").includes(team)) return "AZUL";
+  if(teamNames("ROJO").includes(team)) return "ROJO";
+  return "";
+}
+
+function renderSeasonHeader(){
+  const season = SEASONS[STATE.seasonKey];
+  document.title = `Copa Hispánica · ${season.label}`;
+  document.getElementById('seasonTitle').textContent = `· ${season.label}`;
+  document.getElementById('seasonPill').textContent = `${season.status === "actual" ? "Temporada actual" : "Archivo histórico"} · ${season.label}`;
+  document.getElementById('seasonSummary').textContent = season.summary;
+  document.getElementById('seasonInfoShort').textContent = season.info;
+  document.getElementById('seasonInfo').textContent = season.info;
+  document.getElementById('kpiTeams').textContent = season.kpis[0];
+  document.getElementById('kpiRounds').textContent = season.kpis[1];
+  document.getElementById('kpiFinals').textContent = season.kpis[2];
+
+  const ul = document.getElementById('formatRules');
+  if(STATE.seasonKey === "61"){
+    ul.innerHTML = `
+      <li><strong>20 equipos</strong> repartidos en 2 grupos de 10 (Azul y Rojo) según Ranking Nacional.</li>
+      <li><strong>Jornadas 1–9:</strong> partidos entre equipos del mismo grupo.</li>
+      <li><strong>Jornadas 10–14:</strong> partidos contra equipos del otro grupo según ranking.</li>
+      <li><strong>Jornada 15:</strong> descanso.</li>
+      <li><strong>Jornada 16:</strong> final, tercer puesto y cruces por posición final.</li>`;
+  } else {
+    ul.innerHTML = `
+      <li><strong>16 equipos</strong> repartidos en 2 grupos de 8 (Azul y Rojo) según ranking nacional.</li>
+      <li><strong>Jornadas 1–7:</strong> ida dentro del grupo.</li>
+      <li><strong>Jornadas 8–14:</strong> vuelta, invirtiendo local/visitante.</li>
+      <li><strong>Jornada 15:</strong> descanso.</li>
+      <li><strong>Jornada 16:</strong> final, tercer puesto y cruces por posición final.</li>`;
+  }
+}
+
+function initSeasonSelect(){
+  const sel = document.getElementById('seasonSelect');
+  sel.innerHTML = '';
+  Object.entries(SEASONS).forEach(([key, s])=>{
+    const opt = document.createElement('option');
+    opt.value = key;
+    opt.textContent = s.status === "actual" ? `${s.label} (actual)` : `${s.label} (archivo)`;
+    sel.appendChild(opt);
   });
-  GROUPS.ROJO.forEach((t,i)=>{
-    const d=document.createElement('div'); d.className='note';
-    d.innerHTML = `<strong>${i+1}.</strong> ${t.name} <span class="muted">— ${t.id}</span>`;
-    rojo.appendChild(d);
+  sel.value = STATE.seasonKey;
+  sel.addEventListener('change', async ()=>{
+    await loadSeason(sel.value);
+    setUrlSeason(sel.value);
   });
+}
+
+function finalPriority(fase){
+  if(fase === "Final") return 1;
+  if(fase === "3º Puesto") return 2;
+  const m = String(fase||'').match(/Puesto\s+(\d+)/);
+  if(m) return parseInt(m[1],10);
+  if(fase === "Descanso") return 99;
+  return 10;
 }
 
 function renderCalendario(){
   const tb = document.querySelector('#tablaCal tbody'); tb.innerHTML='';
   const rows = [...STATE.partidos].filter(x=>x.fase!=="Descanso")
-    .sort((a,b)=> (a.jornada??0)-(b.jornada??0) || (a.fase||'').localeCompare(b.fase||''));
+    .sort((a,b)=> (a.jornada??0)-(b.jornada??0) || finalPriority(a.fase)-finalPriority(b.fase) || (a.grupo||'').localeCompare(b.grupo||''));
   rows.forEach(r=>{
     const tr=document.createElement('tr');
     const marcador = (r.pL!=null && r.pV!=null) ? `${r.pL} – ${r.pV}` : '—';
     const tries = (r.tL!=null && r.tV!=null) ? `${r.tL} – ${r.tV}` : '—';
-    const partido = (r.local && r.visitante) ? `${r.local} vs ${r.visitante}` : '—';
+    const note = r.nota ? ` <span class="badge">${r.nota}</span>` : '';
+    const partido = (r.local && r.visitante) ? `${r.local} vs ${r.visitante}${note}` : '—';
     tr.innerHTML = `<td>${r.jornada??'—'}</td><td>${fmt(r.fecha)}</td><td>${r.fase||'—'}</td><td>${r.grupo||'—'}</td><td>${partido}</td><td>${marcador}</td><td>${tries}</td>`;
     tb.appendChild(tr);
   });
@@ -357,35 +563,44 @@ function matchPoints(pFor, pAgainst, triesFor){
   return pts;
 }
 
-function initTable(teamNames){
+function initTable(names){
   const t = {};
-  teamNames.forEach(n=> t[n] = {Equipo:n,PJ:0,PG:0,PE:0,PP:0,PF:0,PC:0,Diff:0,Pts:0,PB_ens:0,PB_der:0});
+  names.forEach(n=> t[n] = {Equipo:n,PJ:0,PG:0,PE:0,PP:0,PF:0,PC:0,Diff:0,Pts:0,PB_ens:0,PB_der:0,Tries:0});
   return t;
 }
 
+function isClassificationMatch(p){
+  return p.estado==='finalizado' && p.pL!=null && p.pV!=null && (p.jornada>=1 && p.jornada<=14);
+}
+
 function computeGroup(groupKey){
-  const teamNames = GROUPS[groupKey].map(x=>x.name);
-  const tab = initTable(teamNames);
+  const names = teamNames(groupKey);
+  const tab = initTable(names);
+  const played = STATE.partidos.filter(isClassificationMatch);
 
-  const played = STATE.partidos.filter(p=> (p.grupo===groupKey) && (p.estado==='finalizado') && (p.pL!=null) && (p.pV!=null));
   played.forEach(p=>{
-    const L = tab[p.local]; const V = tab[p.visitante];
-    if(!L || !V) return;
-    L.PJ++; V.PJ++;
-    L.PF += p.pL; L.PC += p.pV; V.PF += p.pV; V.PC += p.pL;
+    const localGroup = teamGroup(p.local);
+    const visitorGroup = teamGroup(p.visitante);
 
-    if(p.pL>p.pV){ L.PG++; V.PP++; }
-    else if(p.pL<p.pV){ V.PG++; L.PP++; }
-    else { L.PE++; V.PE++; }
+    if(localGroup === groupKey && tab[p.local]){
+      const L = tab[p.local];
+      L.PJ++; L.PF += p.pL; L.PC += p.pV; L.Tries += (p.tL||0);
+      if(p.pL>p.pV) L.PG++; else if(p.pL<p.pV) L.PP++; else L.PE++;
+      if(typeof p.tL==='number' && p.tL>=4) L.PB_ens++;
+      if(p.pL<p.pV && (p.pV-p.pL)<=7) L.PB_der++;
+      L.Pts += matchPoints(p.pL,p.pV,p.tL);
+    }
 
-    if(typeof p.tL==='number' && p.tL>=4) L.PB_ens++;
-    if(typeof p.tV==='number' && p.tV>=4) V.PB_ens++;
-    if(p.pL<p.pV && (p.pV-p.pL)<=7) L.PB_der++;
-    if(p.pV<p.pL && (p.pL-p.pV)<=7) V.PB_der++;
-
-    L.Pts += matchPoints(p.pL,p.pV,p.tL);
-    V.Pts += matchPoints(p.pV,p.pL,p.tV);
+    if(visitorGroup === groupKey && tab[p.visitante]){
+      const V = tab[p.visitante];
+      V.PJ++; V.PF += p.pV; V.PC += p.pL; V.Tries += (p.tV||0);
+      if(p.pV>p.pL) V.PG++; else if(p.pV<p.pL) V.PP++; else V.PE++;
+      if(typeof p.tV==='number' && p.tV>=4) V.PB_ens++;
+      if(p.pV<p.pL && (p.pL-p.pV)<=7) V.PB_der++;
+      V.Pts += matchPoints(p.pV,p.pL,p.tV);
+    }
   });
+
   Object.values(tab).forEach(r=> r.Diff = r.PF - r.PC);
 
   function headToHead(a,b){
@@ -407,13 +622,13 @@ function computeGroup(groupKey){
     return diffA;
   }
 
-  const arr = Object.values(tab).sort((x,y)=>{
+  const rows = Object.values(tab).sort((x,y)=>{
     if(y.Pts!==x.Pts) return y.Pts-x.Pts;
     if(y.Diff!==x.Diff) return y.Diff-x.Diff;
     if(y.PF!==x.PF) return y.PF-x.PF;
     return headToHead(x.Equipo,y.Equipo) * -1;
   });
-  return {rows:arr, playedCount: played.length};
+  return {rows, playedCount: played.length};
 }
 
 function renderTable(targetId, rows){
@@ -435,43 +650,70 @@ function renderTable(targetId, rows){
   el.appendChild(tbl);
 }
 
-function renderCuchara(allRows, anyPlayed){
-  const el = document.getElementById('cuchara');
-  if(!anyPlayed){ el.textContent = 'por decidir'; return; }
-  const sorted = [...allRows].sort((a,b)=> a.Pts-b.Pts || a.Diff-b.Diff || a.PF-b.PF);
-  el.textContent = sorted[0]?.Equipo || 'por decidir';
+function finalMatch(fase){
+  return STATE.partidos.find(p=>p.fase===fase && p.estado==='finalizado' && p.pL!=null && p.pV!=null);
+}
+
+function winner(p){ return !p ? '' : (p.pL>p.pV ? p.local : (p.pV>p.pL ? p.visitante : 'Empate')); }
+function loser(p){ return !p ? '' : (p.pL>p.pV ? p.visitante : (p.pV>p.pL ? p.local : 'Empate')); }
+
+function renderPodio(){
+  const final = finalMatch('Final');
+  const third = finalMatch('3º Puesto');
+  document.getElementById('podio1').textContent = final ? winner(final) : 'por decidir';
+  document.getElementById('podio2').textContent = final ? loser(final) : 'por decidir';
+  document.getElementById('podio3').textContent = third ? winner(third) : 'por decidir';
+
+  const p19 = finalMatch('Puesto 19');
+  const p15 = finalMatch('Puesto 15'); // fallback for T60
+  const cucharaMatch = p19 || p15;
+  const card = document.getElementById('cucharaCard');
+  if(cucharaMatch){
+    card.style.display = 'block';
+    document.getElementById('cuchara').textContent = loser(cucharaMatch);
+  } else {
+    card.style.display = 'none';
+  }
 }
 
 function renderProximoYUltimos(){
   const futuros = STATE.partidos.filter(p=> p.estado!=='finalizado' && p.local && p.visitante && p.fase!=="Descanso");
   const conFecha = futuros.filter(p=> p.fecha).map(p=> ({...p,cuando:new Date(p.fecha.replace(' ','T'))})).sort((a,b)=> a.cuando-b.cuando);
-  const prox = conFecha[0] || futuros.sort((a,b)=> (a.jornada??0)-(b.jornada??0))[0];
+  const prox = conFecha[0] || futuros.sort((a,b)=> (a.jornada??0)-(b.jornada??0) || finalPriority(a.fase)-finalPriority(b.fase))[0];
   const div = document.getElementById('proximo');
-  if(prox){ div.innerHTML = `<strong>${prox.local}</strong> vs <strong>${prox.visitante}</strong><br><span class="muted">${prox.fase} · ${prox.grupo||''} · ${prox.fecha?fmt(prox.fecha):'—'}</span>`; }
+  if(prox){ div.innerHTML = `<strong>${prox.local}</strong> vs <strong>${prox.visitante}</strong><br><span class="muted">J${prox.jornada} · ${prox.fase} · ${prox.grupo||''} · ${fmt(prox.fecha)}</span>`; }
   else div.textContent='No hay partidos pendientes';
 
   const jugados = STATE.partidos.filter(p=> p.estado==='finalizado' && p.pL!=null && p.pV!=null)
-    .sort((a,b)=> (b.jornada??0)-(a.jornada??0));
+    .sort((a,b)=> (b.jornada??0)-(a.jornada??0) || finalPriority(a.fase)-finalPriority(b.fase));
   const ul=document.getElementById('ultimos'); ul.innerHTML='';
   if(jugados.length===0){ ul.innerHTML='<li>Todavía no hay resultados.</li>'; return; }
   jugados.slice(0,6).forEach(p=>{
     const li=document.createElement('li');
-    li.textContent = `${p.local} ${p.pL}-${p.pV} ${p.visitante} · ${p.fase} · ${p.grupo||''}`;
+    li.textContent = `${p.local} ${p.pL}-${p.pV} ${p.visitante} · J${p.jornada} · ${p.fase}`;
     ul.appendChild(li);
   });
 }
 
-async function init(){
-  document.getElementById('year').textContent = new Date().getFullYear();
-  await cargarResultados();
-  renderGrupos();
+async function loadSeason(seasonKey){
+  STATE.seasonKey = seasonKey;
+  await cargarResultados(seasonKey);
+  renderSeasonHeader();
   renderCalendario();
   const azul = computeGroup('AZUL');
   const rojo = computeGroup('ROJO');
   renderTable('tablaAzul', azul.rows);
   renderTable('tablaRojo', rojo.rows);
-  renderCuchara([...azul.rows, ...rojo.rows], (azul.playedCount + rojo.playedCount) > 0);
+  renderPodio();
   renderProximoYUltimos();
+  document.getElementById('seasonSelect').value = seasonKey;
+}
+
+async function init(){
+  document.getElementById('year').textContent = new Date().getFullYear();
+  STATE.seasonKey = seasonFromUrl();
+  initSeasonSelect();
+  await loadSeason(STATE.seasonKey);
 }
 init();
 </script>
