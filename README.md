@@ -13,6 +13,7 @@
 3. Commit + push a `main`.
 
 ## Temporadas
+- https://alatar87.github.io/CopaHispanica/
 - URL normal: Temporada 61.
 - `?season=60`: Temporada 60 archivada.
 
