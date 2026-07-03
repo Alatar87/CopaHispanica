@@ -22,4 +22,4 @@ Edita `results.json`:
 - `pL`, `pV`: marcador.
 - `tL`, `tV`: tries.
 - `estado`: cambiar a `finalizado`.
-- 
+  
